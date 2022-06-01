@@ -1,8 +1,9 @@
 # a minimal demo showing how to call rust inside cpp
-* linker: mold
-* build system: xmake
+* linker: [mold](https://github.com/rui314/mold)
+* build system: [xmake](https://github.com/xmake-io/xmake)
 * toolchain: clang-13
-* rustc: 1.58(you have to use specific version for compatibility with clang)
+* rustc: 1.58(you have to use specific version for [compatibility](https://doc.rust-lang.org/rustc/linker-plugin-lto.html#toolchain-compatibility) with clang)
+* interoperation: [cxx](https://cxx.rs/)
 
 # Run
 ```shell
