@@ -1,4 +1,5 @@
 # modern cpp with rust
+## Try to find a way to call rust from within cpp side.
 There are some tools I have used.
 * linker: [mold](https://github.com/rui314/mold)
 * build system: [xmake](https://github.com/xmake-io/xmake)
@@ -12,10 +13,12 @@ cd back
 cargo build --release
 cd ..
 xmake 
+xmake run
 ```
 # TODO
 - [x] LTO/IPO support
-- [ ] CI/CD
+- [x] CI/CD
+- [x] Dockerfile
 # Credits
 * This project is almost a fork of [cxx-cmake-example](https://github.com/XiangpengHao/cxx-cmake-example) .
 * [lto](https://blog.llvm.org/2019/09/closing-gap-cross-language-lto-between.html) 
