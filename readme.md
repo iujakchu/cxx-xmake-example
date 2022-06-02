@@ -3,7 +3,7 @@ There are some tools I have used.
 * linker: [mold](https://github.com/rui314/mold)
 * build system: [xmake](https://github.com/xmake-io/xmake)
 * compile toolchain: clang-13
-* rustc: 1.58.1(you have to use specific version for [compatibility](https://doc.rust-lang.org/rustc/linker-plugin-lto.html#toolchain-compatibility) with clang)
+* rustc: 1.59.0(you have to use specific version for [compatibility](https://doc.rust-lang.org/rustc/linker-plugin-lto.html#toolchain-compatibility) with clang)
 * interoperation: [cxx](https://cxx.rs/)
 
 # Run
