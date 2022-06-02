@@ -8,9 +8,8 @@ COPY . /root/cxx
 RUN curl https://sh.rustup.rs -sSf | bash -s -- --default-toolchain 1.59.0 -y
 ENV PATH="/root/.cargo/bin:${PATH}" 
 
-# you may need to comment this if you are not in China
-COPY config /root/.cargo/config
-
 WORKDIR /root/cxx
 RUN bash <(curl -fsSL https://xmake.io/shget.text)
+RUN source ~/.xmake/profile
+RUN cd back && cargo build --release
 RUN xmake --root
