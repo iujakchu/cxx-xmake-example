@@ -8,9 +8,7 @@ on:
 
 env:
   CARGO_TERM_COLOR: always
-defaults:
-  run:
-    working-directory: ./back
+
 jobs:
   docker:
     needs: build
@@ -41,4 +39,4 @@ jobs:
     - uses: rui314/setup-mold@v1
     
     - name: Run cargo build
-      run: cargo build --release --verbose
+      run: cd back && cargo build --release --verbose
