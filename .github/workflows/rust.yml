@@ -8,12 +8,18 @@ on:
 
 env:
   CARGO_TERM_COLOR: always
-defaults:
-  run:
-    working-directory: ./back
-jobs:
-  build:
 
+jobs:
+  docker:
+    needs: build
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v3
+    - name: Build the Docker image
+      run: docker build . --file Dockerfile --tag my-image-name:$(date +%s)
+  build:
+    
     runs-on: ubuntu-latest
 
     steps:
@@ -33,4 +39,4 @@ jobs:
     - uses: rui314/setup-mold@v1
     
     - name: Run cargo build
-      run: cargo build --release --verbose
+      run: cd back && cargo build --release --verbose
