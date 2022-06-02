@@ -10,6 +10,6 @@ ENV PATH="/root/.cargo/bin:${PATH}"
 
 WORKDIR /root/cxx
 RUN bash <(curl -fsSL https://xmake.io/shget.text)
-RUN source /root/.xmake/profile
 RUN cd back && cargo build --release
-RUN xmake --root
+RUN source /root/.xmake/profile && xmake --root
+RUN source /root/.xmake/profile && xmake run --root
