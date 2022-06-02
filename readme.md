@@ -14,7 +14,7 @@ cd ..
 xmake 
 ```
 # TODO
-- [ ] LTO/IPO support
+- [x] LTO/IPO support
 - [ ] CI/CD
 # Credits
 * This project is almost a fork of [cxx-cmake-example](https://github.com/XiangpengHao/cxx-cmake-example) .
