@@ -3,17 +3,14 @@ name: Docker Image CI
 on:
    workflow_run:
       workflows: [Rust]
-      branches: [main]
       types:
         - completed
 
 jobs:
+   on-success:
+      runs-on: ubuntu-latest
 
-  build:
-
-    runs-on: ubuntu-latest
-
-    steps:
-    - uses: actions/checkout@v3
-    - name: Build the Docker image
-      run: docker build . --file Dockerfile --tag my-image-name:$(date +%s)
+      steps:
+      - uses: actions/checkout@v3
+      - name: Build the Docker image
+        run: docker build . --file Dockerfile --tag cxe:$(date +%s)
