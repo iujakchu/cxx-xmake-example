@@ -5,6 +5,7 @@ back/target/
 **/Cargo.lock
 .cache/
 compile_commands.json
+after/
 
 # MacOS Cache
 .DS_Store

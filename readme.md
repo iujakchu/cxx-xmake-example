@@ -9,9 +9,6 @@ There are some tools I have used.
 
 # Run
 ```shell
-cd back
-cargo build --release
-cd ..
 xmake 
 xmake run
 ```
@@ -21,4 +18,5 @@ xmake run
 - [x] Dockerfile
 # Credits
 * This project is almost a fork of [cxx-cmake-example](https://github.com/XiangpengHao/cxx-cmake-example) .
-* [lto](https://blog.llvm.org/2019/09/closing-gap-cross-language-lto-between.html) 
+* explain the steps of [lto](https://blog.llvm.org/2019/09/closing-gap-cross-language-lto-between.html) 
+* [rustc lto plugin](https://doc.rust-lang.org/rustc/linker-plugin-lto.html)

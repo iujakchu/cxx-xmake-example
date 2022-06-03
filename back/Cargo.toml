@@ -11,3 +11,7 @@ cxx = "1.0"
 cxx-build = "1.0"
 [lib]
 crate-type = ["staticlib"]
+
+
+[profile.release]
+lto = true
