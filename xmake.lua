@@ -18,7 +18,7 @@ set_kind("binary")
 add_files("src/*.cpp")
 add_includedirs("src/include")
 
-add_files("after/lib.rs.cc")
+add_files("after/lib.rs.cc", { always_added = true })
 add_includedirs("after/include")
 
 add_links("stdc++")
