@@ -95,7 +95,7 @@ fn make_shared_thing() -> ffi::SharedThing {
     }
 }
 
-#[inline(always)]
+/* #[inline(always)] */
 fn rust_echo(val: i32) -> i32 {
     val
 }
